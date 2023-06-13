@@ -26,28 +26,23 @@ foreach ($filelist as $value) {
 $membership="cinema";
 $imgType="hero";
 
-$dir="/172653/email-marketing/3.0/{$membership}/{$imgType}";
+$dir="/172653/email-marketing/2.0/ents_content_standard";
 
 
 $dirlist = ftp_mlsd($ftp_conn, $dir);
 
 $myJSON=json_encode($dirlist);
 
+$decodedJSON = json_decode($myJSON);
 
+$i = 0;
 
-while($i < sizeof($myJSON))
-{
-	echo("<img src='https://web.static.nowtv.com/email-marketing/3.0/{$membership}/{$imgType}/ {$dirlist[$i]["name"]}' width='200'>");
-	$i++;
-}
-
-echo($myJSON);
-
-
+while($i < sizeof($dirlist))
+ {
+echo("<img src='https://web.static.nowtv.com/email-marketing/2.0/ents_content_standard/{$dirlist[$i]["name"]}' width='200'><br><span style='font-size:12px'>{$dir}/{$dirlist[$i]["name"]}</span><br><br>");
+ 	$i++;
+ }
 
 // close connection
 ftp_close($ftp_conn);
 ?>
-
-<br>
-<img src="https://web.static.nowtv.com/email-marketing/3.0/<?=$membership?>/<?=$imgType?>/<?= $dirlist[0]["name"] ?>" alt="" width="200">
