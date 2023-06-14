@@ -145,8 +145,6 @@ ftp_close($ftp_conn);
 </head>
 <body style="background-color:#001211; color:white;">
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
 
 </body>
 
