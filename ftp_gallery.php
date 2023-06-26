@@ -21,10 +21,6 @@ $membership="cinema";
 $imgType="hero";
 
 
-
-
-
-
 $dirlist = ftp_mlsd($ftp_conn, $dir);
 
 $myJSON=json_encode($dirlist);
@@ -110,9 +106,6 @@ function closeModel(modelID) {
   var modal = document.getElementById(modelID);
   modal.style.display = "none";
 }
-
-
-if()
 
 
 </script>
