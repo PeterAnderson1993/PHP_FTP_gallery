@@ -3,7 +3,7 @@
 $ftp_server = "bskybnowtv.upload.akamai.com";
 $ftp_conn = ftp_connect($ftp_server) or die("Could not connect to $ftp_server");
 
-$dir="/172653/email-marketing/gb/logos";
+$dir="/172653/email-marketing/gb/channels";
 
 // login
 if (@ftp_login($ftp_conn, "bskybnowtvemail", "!1biceejr"))
@@ -53,7 +53,9 @@ while($i < sizeof($dirlist))
  {
 echo("
 <!-- Trigger the Modal -->
-<img id='myImg{$i}' class='myImg' src='https://web.static.nowtv.com/email-marketing/gb/logos/{$dirlist[$i]["name"]}' alt='{$dirlist[$i]["name"]}' alt='{$dirlist[$i]["name"]}' style='max-height:100px' onClick='displayModel(`myImg{$i}`,`myModal{$i}`,`img{$i}`, `caption{$i}` )'>
+<div style='border: 2px solid white; display:inline-block; border-radius:6px;'>
+<img id='myImg{$i}' class='myImg' src='https://web.static.nowtv.com/email-marketing/gb/channels/{$dirlist[$i]["name"]}' alt='{$dirlist[$i]["name"]}' alt='{$dirlist[$i]["name"]}' style='max-height:100px; padding:10px;' onClick='displayModel(`myImg{$i}`,`myModal{$i}`,`img{$i}`, `caption{$i}` )'>
+</div>
 
 <!-- The Modal -->
 <div id='myModal{$i}' class='modal'>

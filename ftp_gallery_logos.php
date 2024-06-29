@@ -3,7 +3,7 @@
 $ftp_server = "bskybnowtv.upload.akamai.com";
 $ftp_conn = ftp_connect($ftp_server) or die("Could not connect to $ftp_server");
 
-$dir="/172653/email-marketing/gb/logos";
+$dir="/172653/email-marketing/gb/logos/";
 
 // login
 if (@ftp_login($ftp_conn, "bskybnowtvemail", "!1biceejr"))

@@ -3,7 +3,7 @@
 $ftp_server = "bskybnowtv.upload.akamai.com";
 $ftp_conn = ftp_connect($ftp_server) or die("Could not connect to $ftp_server");
 
-$dir="/172653/email-marketing/gb/logos";
+$dir="/172653/email-marketing/2.0/sports_content_standard";
 
 // login
 if (@ftp_login($ftp_conn, "bskybnowtvemail", "!1biceejr"))
@@ -53,7 +53,7 @@ while($i < sizeof($dirlist))
  {
 echo("
 <!-- Trigger the Modal -->
-<img id='myImg{$i}' class='myImg' src='https://web.static.nowtv.com/email-marketing/gb/logos/{$dirlist[$i]["name"]}' alt='{$dirlist[$i]["name"]}' alt='{$dirlist[$i]["name"]}' style='max-height:100px' onClick='displayModel(`myImg{$i}`,`myModal{$i}`,`img{$i}`, `caption{$i}` )'>
+<img id='myImg{$i}' class='myImg' src='https://web.static.nowtv.com/email-marketing/2.0/sports_content_standard/{$dirlist[$i]["name"]}' alt='{$dirlist[$i]["name"]}' alt='{$dirlist[$i]["name"]}' style='max-height:100px' onClick='displayModel(`myImg{$i}`,`myModal{$i}`,`img{$i}`, `caption{$i}` )'>
 
 <!-- The Modal -->
 <div id='myModal{$i}' class='modal'>
@@ -77,9 +77,6 @@ echo("
 
 <script>
 
-
-
-var modal = "";
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 function displayModel(imgid, modelID, modelImageID, captionID){ 
